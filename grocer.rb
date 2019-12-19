@@ -19,6 +19,7 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+  
     result = []
     index = 0
     while index < cart.length do
@@ -28,15 +29,15 @@ def consolidate_cart(cart)
       else 
         new_cart_item = {
           :item => cart[index][:item]
-          :price => cart[counter][:price]
-          :clearence => cart[counter][:clearence]
+          :price => cart[index][:price]
+          :clearence => cart[index][:clearence]
           :count => 1
         }
         new_cart << new_cart_item
       end
       index +=1
     end
-    result
+    new_cart
 end
 
 def apply_coupons(cart, coupons)
