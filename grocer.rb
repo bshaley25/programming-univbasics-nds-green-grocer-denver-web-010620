@@ -35,6 +35,7 @@ def consolidate_cart(cart)
         new_cart << new_cart_item
       end
       index +=1
+    end
     result
 end
 
