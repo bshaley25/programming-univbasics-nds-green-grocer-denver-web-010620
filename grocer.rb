@@ -28,9 +28,9 @@ def consolidate_cart(cart)
         new_cart_item[:count] += 1 
       else 
         new_cart_item = {
-          :item => cart[index][:item]
-          :price => cart[index][:price]
-          :clearence => cart[index][:clearence]
+          :item => cart[index][:item],
+          :price => cart[index][:price],
+          :clearence => cart[index][:clearence],
           :count => 1
         }
         new_cart << new_cart_item
@@ -56,7 +56,8 @@ def apply_coupons(cart, coupons)
               cart_item_with_coupon[:count] -= coupons[index][:num]
             else
               cart_item_with_coupon = {
-                :
+                :item => couponed_item_name,
+                :price = c
               }
             
           end
