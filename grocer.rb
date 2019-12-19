@@ -3,14 +3,14 @@ def find_item_by_name_in_collection(name, collection)
   #
   # Consult README for inputs and outputs
   
-      index = 0
+    index = 0
     while index < collection.length
-        if name == collection[index][:item]
+        if collection[index][:item] == name
             return collection[index]
         end
         index += 1
     end
-    return nil
+    nil
   
 end
 
@@ -74,11 +74,11 @@ def apply_clearance(cart)
     index = 0
     while index < cart.length do
         if cart[index][:clearance] == true
-            cart[index][:price] *= 0.8
-            cart[index][:price].round(2)
+            (cart[index][:price] * 0.8).round(2)
         end
         index += 1
     end
+    
     cart
   
 end
