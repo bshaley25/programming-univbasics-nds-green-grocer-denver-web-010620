@@ -45,10 +45,14 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-    cart_index = 0
-    while cart_index < cart.length do
-        coupons_index = 0
-        while coupons_index < coupons.length
+    index = 0
+    while index < coupons.length do
+        while index < coupons.length
+          cart_item = find_item_by_name_in_collection(coupons[counter][:item], cart)
+          couponed_item_name = ""
+        
+        
+        
             if cart[cart_index][:item] == coupons[coupons_index][:item]
                 cart[cart_index][:count] -= coupons[coupons_index][:num]
                 discount_item = cart[cart_index].dup
